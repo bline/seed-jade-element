@@ -21,7 +21,7 @@
   var srcPath = 'src';
   var paths = {
     src: srcPath,
-    clean: ['*.html', '*.css', 'test/*.html', 'test'],
+    clean: ['*.html', '*.css', 'test/*.html', 'test', 'dist/*.html', 'dist'],
     dest: '.',
     testSrc: path.join(srcPath, 'test/*.jade'),
     testDest: 'test',
