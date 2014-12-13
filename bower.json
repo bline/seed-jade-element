@@ -1,0 +1,25 @@
+{
+  "name": "seed-jade-element",
+  "version": "0.0.0",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "Element providing solution to no problem in particular.",
+  "keywords": [
+    "jade",
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed"
+  ],
+  "main": "seed-jade-element.html",
+  "license": "MIT",
+  "homepage": "https://github.com/<USERNAME>/seed-jade-element/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.1"
+  }
+}

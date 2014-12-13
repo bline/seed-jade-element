@@ -1,0 +1,47 @@
+doctype html
+//
+  @license
+  Derived from https://github.com/PolymerLabs/seed-element
+  http://polymer.github.io/LICENSE.txt
+  Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+
+//
+  @license
+  Jade/coffeescript version Copyright (c) 2014 Scott Beck. All rights reserved.
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes')
+    title seed-jade-element
+    script(src='../../webcomponentsjs/webcomponents.min.js')
+    script(src='../../web-component-tester/browser.js')
+    // Step 1: import the element to test
+    link(rel='import', href='../seed-jade-element.html')
+  body
+    // You use the document as a place to set up your fixtures.
+    seed-jade-element
+    script
+      :coffee
+        myEl = document.querySelector "seed-jade-element"
+        suite "<seed-jade-element>", ->
+          test 'defines the "author" property', ->
+            assert.equal myEl.author, "Scott Beck"
+            return
+
+          test "says hello", ->
+            assert.equal myEl.sayHello(), "seed-jade-element says, Hello World!"
+            greetings = myEl.sayHello "greetings Earthlings"
+            assert.equal greetings, "seed-jade-element says, greetings Earthlings"
+            return
+
+          test "fires lasers", (done) ->
+            myEl.addEventListener "seed-jade-element-lasers-success", (event) ->
+              assert.equal event.detail.sound, "Pew pew pew!"
+              done()
+              return
+
+            myEl.fireLasers()
+            return
+
+          return
+
